@@ -1,3 +1,9 @@
 <h1>TODO</h1>
-<h2> {{task.name}}</h2>
-<input [(ngModel)]="task.name" placeholder="name">
+
+<input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="task" (keyup.enter)="addTask(task)">
+
+<ul class="tasks">
+    <li *ngFor="let todoTask of tasks">
+        <span class="badge">{{todoTask.name}}</span> lol
+    </li>
+</ul>

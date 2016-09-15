@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 
 import { Task } from './models/task';
 
+const TASKS: Task[] = [
+
+];
 
 @Component({
     selector: 'my-app',
@@ -10,8 +13,19 @@ import { Task } from './models/task';
 })
 
 export class AppComponent {
-    task: Task = {
-        name: "Work chineese ! "
-    };
 
+    tasks = TASKS;
+
+    /*    task: Task = {
+            name: "Work chineese ! "
+        };
+
+    */
+    addTask(TaskName: string): void {
+        console.log(TaskName);
+        var task: Task = {
+            name: TaskName
+        };
+        TASKS.push(task);
+    }
 }

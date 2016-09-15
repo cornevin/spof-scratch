@@ -15,6 +15,7 @@ const TASKS: Task[] = [
 export class AppComponent {
 
     tasks = TASKS;
+    selectedTask: Task;
 
     /*    task: Task = {
             name: "Work chineese ! "
@@ -27,5 +28,9 @@ export class AppComponent {
             name: TaskName
         };
         TASKS.push(task);
-    }
+    };
+
+    onSelect(task: Task): void {
+        this.selectedTask = task;
+    };
 }
